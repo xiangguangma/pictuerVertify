@@ -6,14 +6,14 @@
     <display-name>GtJavaSdkDemo</display-name>
     <servlet>
         <servlet-name>StartCaptchaServlet2</servlet-name>
-        <display-name>StartCaptchaServlet2</display-name>
-        <description></description>
+        <!--<display-name>StartCaptchaServlet2</display-name>-->
+        <!--<description></description>-->
         <servlet-class>demo.demo2.StartCaptchaServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VerifyLoginServlet2</servlet-name>
-        <display-name>VerifyLoginServlet2</display-name>
-        <description></description>
+        <!--<display-name>VerifyLoginServlet2</display-name>-->
+        <!--<description></description>-->
         <servlet-class>demo.demo2.VerifyLoginServlet</servlet-class>
     </servlet>
 
@@ -27,9 +27,9 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.html</welcome-file>
+        <welcome-file>login.htm</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
         <welcome-file>default.html</welcome-file>
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
