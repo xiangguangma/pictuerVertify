@@ -1,9 +1,6 @@
 package com.my.concurrent;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -33,20 +30,20 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class NotSafeDemo3 {
 
     public static void main(String[] args) {
-//        listNotSafe();
+        listNotSafe();
 
-        setNotSafe();
+//        setNotSafe();
 
 //        mapNotSafe();
-        new Thread(() -> {
-
-            System.out.println(Thread.currentThread().getName());
-        },String.valueOf(19)).start();
+//        new Thread(() -> {
+//
+//            System.out.println(Thread.currentThread().getName());
+//        },String.valueOf(19)).start();
 
     }
 
     private static void mapNotSafe() {
-        Map<String,String> map = new ConcurrentHashMap<>(); //new HashMap<>();
+        Map<String,String> map = new ConcurrentHashMap<>(); // Collections.synchronizedMap();  //new HashMap<>();
         for (int i = 0; i < 30; i++) {
             new Thread(() -> {
                 map.put(Thread.currentThread().getName(), UUID.randomUUID().toString().substring(0,8));
